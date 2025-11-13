@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: nov13aksimage1 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nov13aksimage1
+  template:
+    metadata:
+      labels:
+        app: nov13aksimage1 
+    spec:
+      containers:
+        - name: nov13aksimage1 
+          image: nov13registry.azurecr.io/nov13aksimage1
+          ports:
+          - containerPort: 80
